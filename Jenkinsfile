@@ -25,7 +25,7 @@ pipeline {
         }
       }
     }
-    stage('Development Test Stage / Code Quality') {
+    stage('Dev Test Stage / Code Quality') {
       parallel {
         stage('Development Test Stage / Code Quality') {
           steps {
@@ -35,6 +35,36 @@ pipeline {
         stage('Static code analysis') {
           steps {
             echo 'Static code analysis'
+          }
+        }
+        stage('Dynamic code analysis') {
+          steps {
+            echo 'Dynamic code analysis'
+          }
+        }
+        stage('Security analysis') {
+          steps {
+            echo 'Security Analysis'
+          }
+        }
+        stage('Profiler / Code Review tools') {
+          steps {
+            echo 'prof code review'
+          }
+        }
+        stage('Component test') {
+          steps {
+            echo 'component test'
+          }
+        }
+        stage('Integration test') {
+          steps {
+            echo 'int test'
+          }
+        }
+        stage('Acceptance test') {
+          steps {
+            echo 'acceptance test'
           }
         }
       }
