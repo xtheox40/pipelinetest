@@ -69,5 +69,10 @@ pipeline {
         }
       }
     }
+    stage('Package Stage / Push') {
+      steps {
+        echo 'package'
+      }
+    }
   }
 }
